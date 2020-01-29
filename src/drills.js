@@ -71,10 +71,10 @@ function filterDateAdded(daysAgo) {
 
 function totalPricePerCategory() {
   knexInstance
-    .select('id','category', 'price')
+    .select('category')
     .sum('price')
     .from('shopping_list')
-    .groupBy('id','category')
+    .groupBy('category')
     .then(result => {
       console.log(result);
     });
