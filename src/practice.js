@@ -1,3 +1,5 @@
+
+
 require('dotenv').config()
 const knex = require('knex')
 
@@ -35,6 +37,8 @@ function searchByProductName(searchTerm) {
 
 //invoking function with parameter
 searchByProductName('holo')
+
+
 function paginateProducts(page) {
   const productsPerPage = 10
   const offset = productsPerPage * (page - 1)
